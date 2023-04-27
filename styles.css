@@ -165,6 +165,20 @@ html {
     .project-card img {
         height: 150px;
     }
+
+    .hero-section h1 {
+        top: 70%;
+        left: 31%;
+        font-size: 35px;
+    }
+
+    .navbar a {
+        margin-left: 0%;
+    }
+
+    .skills-section img {
+        width: 13%;
+    }
 }
 
 
