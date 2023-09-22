@@ -1,0 +1,10 @@
+.container-home {
+    overflow: hidden;
+    position: relative;
+}
+
+#wave-2 {
+    margin-left: 1000px;
+    margin-top: 600px;
+    overflow: hidden;
+}

@@ -1,0 +1,46 @@
+.container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: 100px 0 0 0;
+}
+
+.sub-container {
+    width: 50%;
+    margin: 100px 25% 100px 25%;
+    border-radius: 20px;
+}
+
+h1 {
+    color: transparent;
+    font-family: 'Anton', sans-serif;
+    font-size: 60px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(251, 251, 174);
+}
+
+p {
+    font-family: 'Aldrich', sans-serif;
+    font-size: 25px;
+    color: rgb(222, 222, 222);
+    line-height: 35px;
+}
+
+.text-container {
+    padding: 20px 20px 40px 20px;
+}
+
+@media only screen 
+and (max-device-width: 1150px)
+{
+    .sub-container {
+        width: 100%;
+        margin: 100px 0% 100px 0%;
+        border-radius: 20px;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+    
+}

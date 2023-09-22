@@ -1,0 +1,56 @@
+.container {
+    height: 650px;
+    font-family: 'Hind', sans-serif;
+    color: rgb(222, 222, 222);
+    font-family: 'Anton', sans-serif;
+    margin-top: 30px;
+    overflow: hidden;
+    position: relative;
+}
+
+.container img {
+    width: 25%;
+    margin: 0 37.5% 0 37.5%;
+    border-radius: 50%;
+    border: solid 3px rgb(251, 251, 174);
+}
+
+#top {
+    text-align: center;
+    font-size: 100px;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: rgb(238, 236, 236);
+}
+
+#bottom {
+    text-align: center;
+    font-size: 70px;
+    width: 50%;
+    margin: -20px 25% 0 25%;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: rgb(222, 222, 222);
+    color: transparent;
+}
+
+/* WAVE ANIMATIONS (https://dev.to/pixmy/create-waves-with-pure-css-5gp) */
+
+#wave-2 {
+    margin-left: 1000px;
+    margin-top: 600px;
+    overflow: hidden;
+}
+
+@media only screen 
+and (max-device-width: 1150px)
+{
+    .container img {
+        width: 50%;
+        margin: 50px 25% 0 25%;
+    }
+    
+
+}
+
+
+
+
