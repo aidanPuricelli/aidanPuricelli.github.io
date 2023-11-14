@@ -15,8 +15,8 @@
 .card-container {
     position: relative;
     overflow: hidden;
-    height: 40vw;
-    margin-top: 10vh;
+    height: 60vw;
+    margin-top: 5vh;
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -24,7 +24,7 @@
 
 .scroll-arrow {
     position: absolute;
-    top: 44%; /* Adjust as necessary */
+    top: 30%; /* Adjust as necessary */
     font-size: 6vh;
     z-index: 100;
 }
@@ -47,26 +47,28 @@
 .card-content {
     width: 80%;
     margin-left: 10%;
-    height: 30vw;
+    height: 35vw;
     box-shadow: 6px 6px 8px rgb(48, 48, 48);
-    padding: 2.5vh 0 2.5vh 0;
 }
 
 .card-text {
-    width: 30%;
     padding: 2vh;
     float: left;
+    width: 20%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
 }
 
 .card-image {
-    width: 60%;
-    float: left;
-    height: 30vw;
+    width: 100%;
+    float: right;
 }
 
 .card-image img {
-    height: 30vw;
+    height: 35vw;
     object-fit: cover;
+    object-position: 50% 30%;
     width: 100%;
 }
 
