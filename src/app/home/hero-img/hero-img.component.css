@@ -16,14 +16,14 @@
 .text {
     width: 40%; 
     float: left;
-    margin: 4vh 0 0 0;
+    margin: 3vh 0 0 0;
     position: absolute;
     right: 10px;
     
 }
 
 .text p {
-    font-size: 1.4vh;
+    font-size: 1em;
 }
 
 img {
