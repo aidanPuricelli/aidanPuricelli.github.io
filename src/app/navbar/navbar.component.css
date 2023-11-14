@@ -1,0 +1,21 @@
+.container {
+    font-family: 'Roboto Condensed', sans-serif;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.left {
+    float: left;
+    margin-left: 1em;
+}
+
+.right  {
+    margin: 1em 2em 0 0;
+    position: fixed;
+    right: 0;
+}
+
+span {
+    font-size: 2.5em;
+}
