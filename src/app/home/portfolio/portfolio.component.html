@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="content">
+        <div class="header">
+            <h1>Portfolio...</h1>
+        </div>
+        <div class="card-container">
+            <div class="card" *ngFor="let project of projects">
+                <div class="project-image">
+                    <img src="{{project.image}}">
+                </div>
+                <div class="project-text">
+                    <h1>{{project.title}}</h1>
+                    <h3><i>{{project.role}}</i></h3>
+                    <h3><i>{{project.dates}}</i></h3>
+                    <p>{{project.description}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="arrow">
+        <a (click)="scrollToElement('contact')"><span class="material-symbols-outlined">arrow_downward</span></a>
+    </div>
+</div>
+<div class="line" id="contact"></div>
