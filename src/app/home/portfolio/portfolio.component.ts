@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-portfolio',
@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrl: './portfolio.component.css'
 })
 export class PortfolioComponent {
+
+  currentProjectIndex = 0;
 
   projects = [
     {title: 'VinylVault', role:'Creator', dates: 'Nov 2023 - Present', description: 'Developed a user-friendly vinyl collection and wishlist management application using Angular and SpringBoot.', image:'../../../assets/vinylvault.png'},
@@ -20,6 +22,22 @@ export class PortfolioComponent {
       element.scrollIntoView({behavior: 'smooth'});
     }
 
+  }
+
+  constructor(private changeDetector: ChangeDetectorRef) {}
+
+  previousProject() {
+    if (this.currentProjectIndex > 0) {
+      this.currentProjectIndex--;
+      this.changeDetector.detectChanges(); // Manually trigger change detection
+    }
+  }
+
+  nextProject() {
+    if (this.currentProjectIndex < this.projects.length - 1) {
+      this.currentProjectIndex++;
+      this.changeDetector.detectChanges(); // Manually trigger change detection
+    }
   }
 
 }

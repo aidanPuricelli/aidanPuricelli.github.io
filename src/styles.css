@@ -2,3 +2,85 @@ html {
     background-color: rgb(245, 234, 212);
     cursor: crosshair;
 }
+
+.fade-in-text-shorter {
+    opacity: 0;
+    animation: fadeInAnimationShorter ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimationShorter {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+    
+}
+
+.fade-in-text-longer {
+    opacity: 0;
+    animation: fadeInAnimationLonger ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimationLonger {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.spin-out-text {
+    opacity: 0;
+    animation: SpinOutAnimation ease 2.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+  
+@keyframes SpinOutAnimation {
+    0% {
+      opacity: 0;
+    }
+    50% {
+        opacity: 1;
+        transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)
+    }
+    100% {
+      opacity: 1;
+      transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(90deg, 0deg);
+      display: none;
+    }
+}
+
+.fade-in-text {
+    opacity: 0;
+    animation: FadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes FadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    90% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+    
+}

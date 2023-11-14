@@ -13,56 +13,84 @@
 }
 
 .card-container {
-    background-color: red;
+    position: relative;
+    overflow: hidden;
+    height: 40vw;
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.scroll-arrow {
+    position: absolute;
+    top: 44%; /* Adjust as necessary */
+    font-size: 6vh;
+    z-index: 100;
+}
+
+.left-arrow {
+    left: 3vw;
+}
+
+.right-arrow {
+    right: 3vw;
 }
 
 .card {
-    transition: 0.3s;
-    display: block;
-    float: left;
-    margin: 2vh 0 0 3vw;
-    border-radius: 1vh;
-    box-shadow: 4px 4px 6px rgb(122, 122, 122);
-    width: 45vw;
-    height: 35vh;
-    border: solid 4px black;
+    flex: 0 0 100%; /* Each card takes full width of the container */
+    /* Additional styles for the card */
+    /* Adjust margin, padding, etc., as needed */
+    transition: transform 0.5s ease; /* Optional: for smooth transitioning */
 }
 
-.project-image {
+.card-content {
+    width: 80%;
+    margin-left: 10%;
+    height: 30vw;
+    box-shadow: 6px 6px 8px rgb(48, 48, 48);
+    padding: 2.5vh 0 2.5vh 0;
+}
+
+.card-text {
+    width: 30%;
+    padding: 2vh;
+    float: left;
+}
+
+.card-image {
     width: 60%;
     float: left;
-    height: 30vh;
+    height: 30vw;
 }
 
-.project-image img {
-    width: 90%;
-    margin: 2vh 5% 0 5%;
-    height: 30vh;
+.card-image img {
+    height: 30vw;
     object-fit: cover;
-    border-radius: 1vh;
+    width: 100%;
 }
 
-.project-text {
-    width: 35%;
-    float: left;
-    height: 30vh;
-    margin-right: 1vw;
-}
-
-.project-text h1 {
-    margin-top: 5vh;
-}
 
 .arrow  {
-    text-align: center;
-    margin-top: 80vh;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    display: block;
+    margin-right: auto;
+    margin-bottom: 40px;
+    margin-left: auto;
     animation: bounce 2s infinite;
+    text-align: center;
 }
 
 
 span {
     font-size: 10vh;
     cursor: pointer;
+    vertical-align: middle;
+    overflow-clip-margin: content-box;
+    overflow: clip;
 }
 
 @keyframes bounce {
