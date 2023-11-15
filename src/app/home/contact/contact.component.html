@@ -1,20 +1,20 @@
 <div class="container">
     <div class="content">
-        <div class="header fade-in-text-shorter">
-            <h1>Contact</h1>
+        <div class="header">
+            <h1 [ngClass]="{'fade-in-text-shorter': isVisible, 'hidden': !isVisible}">Contact</h1>
         </div>
-        <div class="contact-info fade-in-text-longer">
+        <div class="contact-info" [ngClass]="{'fade-in-text-longer': isVisible, 'hidden': !isVisible}">
             <h3>aidanpuricelli&#64;gmail.com</h3>
         </div>
-        <div class="socials fade-in-text-longer">
+        <div class="socials" [ngClass]="{'fade-in-text-longer': isVisible, 'hidden': !isVisible}">
             <a href="https://github.com/aidanPuricelli"><img src="../../../assets/github.png" id="github"></a>
             <a href="https://www.linkedin.com/in/aidan-puricelli-504b80250?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BII8j6O3SQzOYuwislPlMaQ%3D%3D"><img src="../../../assets/linkedin.png" id="linkedin"></a>
         </div>
     </div>
-    <div class="header header-two fade-in-text-shorter">
-        <h1>Professional Experience</h1>
+    <div class="header header-two">
+        <h1 [ngClass]="{'fade-in-text-shorter': isVisible, 'hidden': !isVisible}">Professional Experience</h1>
     </div>
-    <div class="experience fade-in-text-longer">
+    <div class="experience" [ngClass]="{'fade-in-text-longer': isVisible, 'hidden': !isVisible}">
         <div class="experience-header">
             <h2>Software Engineering Intern</h2>
         </div>
