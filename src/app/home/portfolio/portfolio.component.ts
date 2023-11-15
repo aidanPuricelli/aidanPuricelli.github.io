@@ -1,4 +1,4 @@
-import { Component, ChangeDetectorRef } from '@angular/core';
+import { Component, ChangeDetectorRef, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-portfolio',
@@ -10,8 +10,8 @@ export class PortfolioComponent {
   currentProjectIndex = 0;
 
   projects = [
-    {title: 'VinylVault', role:'Creator', dates: 'Nov 2023 - Present', description: 'Developed a user-friendly vinyl collection and wishlist management application using Angular and SpringBoot.', image:'../../../assets/vinylvault.png'},
-    {title: 'DivArt', role:'Creator', dates: 'Nov 2023 - Present', description: 'Website art project. All art on the website has been created using only HTML and CSS code. Inspired by Lynn Fisher\'s project, A Single Div.', image:'../../../assets/divart.png'},
+    {title: 'VinylVault', role:'Creator', dates: 'June 2022 - Present', description: 'Developed a user-friendly vinyl collection and wishlist management application using Angular and SpringBoot.', image:'../../../assets/vinylvault.png'},
+    {title: 'DivArt', role:'Creator', dates: 'January 2022 - Present', description: 'Website art project. All art on the website has been created using only HTML and CSS code. Inspired by Lynn Fisher\'s project, A Single Div.', image:'../../../assets/divart.png'},
     {title: 'Magic Card AI', role:'Creator', dates: 'Nov 2023 - Present', description: 'Web application created using the openAI API. After being given a prompt, generates an original Magic the Gathering card.', image:'../../../assets/magic.png'},
     {title: 'Video Game', role:'Creator', dates: 'Nov 2023 - Present', description: 'Original video game created in GameMaker Studio 2. All of the art, music, and game logic has been created by me.', image:'../../../assets/videoGame.png'},
   ]
@@ -38,6 +38,20 @@ export class PortfolioComponent {
       this.currentProjectIndex++;
       this.changeDetector.detectChanges(); // Manually trigger change detection
     }
+  }
+
+  isCardContainerVisible: boolean = false;
+
+  vhInPixels(vh: number): number {
+    return vh * (window.innerHeight / 100);
+  };
+
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll() {
+    const scrollPosition = window.scrollY;
+    const threshold = this.vhInPixels(70);
+
+    this.isCardContainerVisible = scrollPosition >= threshold;
   }
 
 }

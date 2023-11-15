@@ -24,31 +24,6 @@
     -webkit-text-size-adjust: 100%;
     margin-top: 20vh;
 }
-
-
-
-.arrow  {
-    position: absolute;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    display: block;
-    margin-right: auto;
-    margin-bottom: 40px;
-    margin-left: auto;
-    animation: bounce 2s infinite;
-    text-align: center;
-}
-
-
-span {
-    font-size: 10vh;
-    cursor: pointer;
-    vertical-align: middle;
-    overflow-clip-margin: content-box;
-    overflow: clip;
-}
-
   
 #projects {
     width: 100%;

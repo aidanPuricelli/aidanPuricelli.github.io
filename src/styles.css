@@ -23,20 +23,18 @@ html {
 
 .fade-in-text-longer {
     opacity: 0;
-    animation: fadeInAnimationLonger ease 2s;
+    animation: fadeInAnimationLonger ease 1s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
 
 @keyframes fadeInAnimationLonger {
-    0% {
+   0%{
         opacity: 0;
     }
-
     50% {
         opacity: 0;
     }
-
     100% {
         opacity: 1;
     }
